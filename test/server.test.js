@@ -13,7 +13,7 @@ test('Validation Token', (assert) => {
   const token = 'foo';
   let s = new Server(token);
 
-  assert.equal(token, s.validationKey, 'Token should be set on instantiation');
+  assert.deepEqual([token], s.validationKey, 'Token should be set on instantiation');
 
   try {
     s = new Server();
@@ -125,7 +125,7 @@ test('Slash Command', (assert) => {
       response_url: responseUrl,
     })
     .end((err, res) => {
-      assert.equal(res.text, 'He comes...', 'Valid Response');
+      assert.equal(res.statusCode, 200, 'Valid Response');
     });
 
   // catch Zlago'd text Response

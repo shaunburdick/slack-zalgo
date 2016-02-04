@@ -23,7 +23,7 @@ Official Image [shaunburdick/slack-zalgo](https://registry.hub.docker.com/u/shau
 
 ### Configuration Environment Variables
 You can set the configuration of the bot by using environment variables. _ENVIRONMENT_VARIABLE_=Default Value
-- _ZALGO_VALIDATION_TOKEN_=, the validation token for your command app
+- _ZALGO_VALIDATION_TOKEN_=, the validation token for your command app, separate multiple with comma (,)
 - _ZALGO_PORT_=3000, what port he listens on
 
 Set them using the `-e` flag while running docker:
