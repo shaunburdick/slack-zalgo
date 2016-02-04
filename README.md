@@ -4,6 +4,7 @@
 This slack command turns any text into zalgo.
 
 ## Example
+coming soon!
 
 ## Install
 1. Clone this [repository](https://github.com/shaunburdick/slack-zalgo.git)
@@ -30,7 +31,6 @@ Set them using the `-e` flag while running docker:
 ```
 docker run -it \
 -e ZALGO_VALIDATION_TOKEN=aslkasjlkasd \
--e ZALGO_PORT=12345 \
 shaunburdick/slack-zalgo:latest
 ```
 
