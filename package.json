@@ -1,0 +1,47 @@
+{
+  "name": "slack-zalgo",
+  "version": "0.1.0",
+  "description": "Slack command for writing zalgo",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "node index.js",
+    "test": "npm run unit",
+    "unit": "faucet",
+    "lint": "eslint .",
+    "coverage": "tap --coverage-report=html test/*.test.js",
+    "coveralls": "tap --coverage-report=text-lcov test/*.test.js | coveralls",
+    "travis": "npm run lint && npm run coveralls"
+  },
+  "author": "Shaun Burdick <github@shaunburdick.com>",
+  "homepage": "http://github.com/shaunburdick/slack-zalgo",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/shaunburdick/slack-zalgo.git"
+  },
+  "license": "ISC",
+  "engine": {
+    "node": "^5.1.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.4",
+    "morgan": "^1.6.1",
+    "request": "^2.69.0",
+    "to-zalgo": "^1.0.0",
+    "winston": "^2.1.1"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.6",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^5.0.0",
+    "faucet": "0.0.1",
+    "istanbul": "^0.4.1",
+    "supertest": "^1.1.0",
+    "tap": "^5.4.2",
+    "tape": "^4.4.0"
+  },
+  "nyc": {
+    "include": ["lib/*"]
+  }
+}
