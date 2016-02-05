@@ -4,7 +4,13 @@
 This slack command turns any text into zalgo.
 
 ## Example
-coming soon!
+Configure a Slack [Slash](https://my.slack.com/services/new/slash-commands) command. I recommend `/zalgo`
+
+`/zalgo some text` to summon the old one.
+
+`/zalgo help` to ask the old one for help.
+
+![Example](https://github.com/shaunburdick/slack-zalgo/raw/master/doc/img/example.png)
 
 ## Install
 1. Clone this [repository](https://github.com/shaunburdick/slack-zalgo.git)
@@ -19,7 +25,7 @@ coming soon!
 ## Docker
 Build an image using `docker build -t your_image:tag`
 
-Official Image [shaunburdick/slack-zalgo](https://registry.hub.docker.com/u/shaunburdick/slack-zalgo/)
+Official Image [shaunburdick/slack-zalgo](https://hub.docker.com/r/shaunburdick/slack-zalgo/)
 
 ### Configuration Environment Variables
 You can set the configuration of the bot by using environment variables. _ENVIRONMENT_VARIABLE_=Default Value
