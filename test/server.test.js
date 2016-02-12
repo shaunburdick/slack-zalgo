@@ -8,12 +8,19 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 test('Validation Token', (assert) => {
-  assert.plan(2);
+  assert.plan(4);
 
   const token = 'foo';
   let s = new Server(token);
 
   assert.deepEqual([token], s.validationKey, 'Token should be set on instantiation');
+
+  const multiToken = ['foo', 'bar', 'baz'];
+  s = new Server(multiToken.join(','));
+  assert.deepEqual(multiToken, s.validationKey, 'Multiple Tokens should be parsed');
+
+  s = new Server(multiToken.join(',   '));
+  assert.deepEqual(multiToken, s.validationKey, 'Multiple Tokens with spaces should be parsed');
 
   try {
     s = new Server();
